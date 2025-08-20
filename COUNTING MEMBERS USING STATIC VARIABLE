@@ -1,0 +1,52 @@
+1. 🎯 Aim
+To implement a simple Member Management System in Java using Object-Oriented Programming concepts, demonstrating static variables and object instantiation.
+
+2. 🧠 Algorithm
+- Start
+- Define a Member class with a static variable totalMembers and instance variable name
+- Create a constructor to initialize name and increment totalMembers
+- Add methods to retrieve member name and total member count
+- In the Main class, create three Member objects
+- Print each member's name and the total number of members created
+- End
+
+3. 💻 Java Code
+class Member {
+    private static int totalMembers = 0;
+    private String name;
+
+    public Member(String name) {
+        this.name = name;
+        totalMembers++; 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public static int getTotalMembers() {
+        return totalMembers;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Member m1 = new Member("Alice");
+        Member m2 = new Member("Bob");
+        Member m3 = new Member("Charlie");
+
+        System.out.println(m1.getName());
+        System.out.println(m2.getName());
+        System.out.println(m3.getName());
+        System.out.println("Total Members Created: " + Member.getTotalMembers());
+    }
+}
+
+
+
+4. 📤 Output
+Alice  
+Bob  
+Charlie  
+Total Members Created: 3  
+
